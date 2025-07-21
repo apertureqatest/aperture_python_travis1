@@ -1,4 +1,10 @@
 dist: focal
 language: python
-script: echo "Travis CI"
-install: skip
+python:
+  - "3.8"
+  - "3.9"
+  - "3.10"
+install:
+  - pip install -r requirements.txt
+script:
+  - pytest
